@@ -1,57 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<script>
-		 function afficheVille()
-		{
-			let choix_ville = document.getElementbyId("choixVille").value;
-			
-			let villes = document.getElementsByBlassName("Ville");
-			
-			for (i=0; i < villes.length; i++)
-			{
-				if(villes[i].id == choix_villes)
-				(
-				   villes[i].style.display = "block";
-				) else
-				(
-					villes[i].style.display = "None";
-				)
-			}
-		}
-		</script>	
-	</head>
-	<body>
-	<header>
-		<p>TD n°1 Programmation web - Application météo</p>
-	</header>
-	<select id="choixVille" onchange="afficheVille()">
-		<option value="Niort">Niort</option>
-		<option value="Rio">Rio de Janeiro</option>
-		<option value="Reykjavik">Reykjavik</option>
-	</select>
-	<div class="flexbox">
-	<div class="image">
-		 <h2>Niort</h2>
-		 <p>12°, pluvieux</p>
-		 <img src="pluvieux.png" width="5%"/>
-	</div>
-	<div class="image">
-		 <h2>Riot de Janeiro</h2>
-		 <p>29°, orageux</p>
-		 <img src="orageux.png" width="5%"/>
-	</div>
-	<div class="image">
-		 <h2>Reykjavik</h2>
-		 <p>-10°, ensoleillé</p>
-		 <img src="ensoleille.png" width="5%"/>
-	</div>
-	</div>
-	</body>
-	<footer>
-		<p>Gaspar Rigot</p>
-		<p>Icône météo par <a href="https://thenounproject.com/">The Noun Project</a></p>
-	</footer>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        function afficheVille() {
+            let choixVille = document.getElementById("choixVille").value;
+            
+            let villes = document.getElementsByClassName("Ville");
+            
+            for (let i = 0; i < villes.length; i++) {
+                if (villes[i].id === choixVille) {
+                    villes[i].style.display = "block";
+                } else {
+                    villes[i].style.display = "none";
+                }
+            }
+        }
+    </script>    
+</head>
+<body onload="afficheVille()">
+<header>
+    <p>TD n°1 Programmation web - Application météo</p>
+</header>
+<select id="choixVille" onchange="afficheVille()">
+    <option value="Niort">Niort</option>
+    <option value="Rio">Rio de Janeiro</option>
+    <option value="Reykjavik">Reykjavik</option>
+</select>
+<div class="flexbox">
+<div class="Ville" id="Niort">
+     <h2>Niort</h2>
+     <p>12°, pluvieux</p>
+     <img src="pluvieux.png" width="50%"/>
+</div>
+<div class="Ville" id="Rio">
+     <h2>Rio de Janeiro</h2>
+     <p>29°, orageux</p>
+     <img src="orageux.png" width="50%"/>
+</div>
+<div class="Ville" id="Reykjavik">
+     <h2>Reykjavik</h2>
+     <p>-10°, ensoleillé</p>
+     <img src="ensoleille.png" width="50%"/>
+</div>
+</div>
+</body>
+<footer>
+    <p>Gaspar Rigot</p>
+    <p>Icône météo par <a href="https://thenounproject.com/">The Noun Project</a></p>
+</footer>
 </html>
