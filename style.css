@@ -1,0 +1,39 @@
+.flexbox {
+	display: flex;
+	justify-content: space-envenly;
+	flex-wrap:nowrap;
+}
+
+div .image{
+	flex: 1;
+}
+
+header{
+	background-color: black;
+	color: white;
+	text-align: center;
+	height: 60px;
+	line-height: 60px;
+}
+
+div{
+	background-color: lightgray;
+	margin-bottom: 20px;
+	justify-content:space-evenly;
+}
+
+
+.ville p,h2,img{
+	display:flex;
+	margin:10px 10px 10px 10px;
+	flex-direction : column;
+	justify-content:center;
+}
+
+
+
+footer{
+	background-color: lightgray;
+	height: 70px;
+}
+
